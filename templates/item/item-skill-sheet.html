@@ -1,0 +1,40 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{>"systems/mutant-year-zero/templates/item/partials/header-simple.html"}}
+
+    <div>
+        <div>
+            <div class="grid grid-3col item-attr-row align-start">
+                <div class="resource">
+                    <label class="resource-label" for="data.value">{{localize 'MYZ.VALUE'}}</label>
+                    <input type="text" name="data.value" value="{{data.value}}" data-dtype="Number" />
+                </div>
+                <div class="resource flex column">
+                    <label class="resource-label" for="data.creatureType">{{localize 'MYZ.ACTOR_TYPE'}}</label>
+                    <select name="data.creatureType">
+                        {{#select data.creatureType}}
+                        <option value="mutant">{{localize "MYZ.MUTANT"}}</option>
+                        <option value="animal">{{localize "MYZ.ANIMAL"}}</option>
+                        <option value="robot">{{localize "MYZ.ROBOT"}}</option>
+                        <option value="human">{{localize "MYZ.HUMAN"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="resource flex column">
+                    <label class="resource-label" for="data.attribute">{{localize "MYZ.ATTRIBUTES"}}</label>
+                    <select name="data.attribute">
+                        {{#select data.attribute}}
+                        <option value="strength">{{localize (toUpperCase (concat 'MYZ.ATTRIBUTE_STRENGTH_' data.creatureType))}}</option>
+                        <option value="agility">{{localize (toUpperCase (concat 'MYZ.ATTRIBUTE_AGILITY_' data.creatureType))}}</option>
+                        <option value="wits">{{localize (toUpperCase (concat 'MYZ.ATTRIBUTE_WITS_' data.creatureType))}}</option>
+                        <option value="empathy">{{localize (toUpperCase (concat 'MYZ.ATTRIBUTE_EMPATHY_' data.creatureType))}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Description</h2>
+    <div class="info-high">
+        <div class="description">{{editor content=data.description target="data.description" button=true owner=owner editable=true}}</div>
+    </div>
+</form>

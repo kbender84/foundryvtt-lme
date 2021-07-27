@@ -1,0 +1,20 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{> systems/mutant-year-zero/templates/item/partials/header-physical.html}}
+
+    <div class="item-attr-row">
+        <label class="resource-label" for="data.comment">{{localize "MYZ.COMMENT"}}</label>
+        <input type="text" name="data.comment" value="{{data.comment}}">
+    </div>
+
+    <div class="item-attr-row">
+        <label class="resource-label" for="data.requirement">{{localize "MYZ.REQUIREMENT"}}</label>
+        <input type="text" name="data.requirement" value="{{data.requirement}}">
+    </div>
+
+    <h2>Description</h2>
+    <div class="info">
+        <div class="description">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        </div>
+    </div>
+</form>
