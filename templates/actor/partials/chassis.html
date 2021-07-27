@@ -1,0 +1,28 @@
+<div class="box-item header flex row align-center space-between {{data.type}}">
+    <label class="item-name">{{localize "MYZ.CHASSIS"}}</label>
+    <!--<span class="item-controls">
+        <a class="item-create" data-type="chassis">+ Add</a>
+    </span>-->
+</div>
+<ol class="box-list chassis {{data.type}}">
+    {{#each chassis as |chassis key|}}
+    {{#if (ifvalue chassis.data.equipped true)}}
+    <li class="box-item chassis felxrow editable-item" data-item-id="{{chassis._id}}">
+        <div class="chasis-details">
+            <div class="flex column">
+                <label class="item-name" style="margin-bottom:2px;"><strong>{{chassis.name}}</strong></label>
+                <div class="chasis flex row space-between" style="font-size: 12px; margin-bottom:2px;">
+                    <label class="chassis-name">{{localize (toUpperCase (concat "MYZ." chassis.data.location))}}</label>
+                </div>
+                <span class="chassis-name">
+                    <label style="font-size:12px"><strong>Se: {{chassis.data.strength}}&nbsp;&nbsp;St: {{chassis.data.agility}}&nbsp;&nbsp;Pr: {{chassis.data.wits}}&nbsp;&nbsp;Ne: {{chassis.data.empathy}}</strong></label>
+                </span>
+            </div>
+            <div class="chassis-armor">
+                <strong>{{chassis.data.armor}}</strong>
+            </div>
+        </div>
+    </li>
+    {{/if}}
+    {{/each}}
+</ol>

@@ -1,0 +1,47 @@
+{
+	"name": "yze-lme",
+	"title": "La Morbide Epoque",
+	"description": "YZE-La Morbide Epoque",
+	"version": "0.1",
+	"minimumCoreVersion": "0.8.6",
+	"compatibleCoreVersion": "0.8.8",
+	"templateVersion": 1,
+	"author": "kbender84"
+	"esmodules": ["module/myz.js"],
+	"styles": ["css/mutant-year-zero.css"],
+	"scripts": [],
+	"packs": [
+		{
+			"name": "core-skills",
+			"label": "Core Skills",
+			"system": "mutant-year-zero",
+			"path": "./packs/core-skills.db",
+			"entity": "Item"
+		},
+		{
+			"name": "myz-macros",
+			"label": "MYZ macors",
+			"system": "mutant-year-zero",
+			"path": "./packs/myz-macros.db",
+			"entity": "Macro"
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "pl",
+			"name": "Polish",
+			"path": "lang/pl.json"
+		}
+	],
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"url": "https://github.com/kbender84/yze-lme",
+	"manifest": "https://raw.githubusercontent.com/kbender84/yze-lme/master/system.json",
+	"download": "https://github.com/kbender84/yze-lme/releases/download/v0.1/yze-lme.zip",
+	"license": "LICENSE.txt"
+}
