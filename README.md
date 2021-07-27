@@ -1,11 +1,11 @@
-# Year-Zero-Engine
+# Year-Zero-Engine-PL
 
-YZE campaign system for FoundryVTT.
+Modyfikacja systemu YZE pod własną kampanię
 
-## Character Types:
+## Postaci
 
-**HUMANS**,\
-**NPC** -> a shorter version of a mutant/animal/robot/human \
+**Człowiek**,\
+**BN** -> a shorter version of a mutant/animal/robot/human \
 
 ## Abilities:
 
